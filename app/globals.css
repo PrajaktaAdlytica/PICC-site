@@ -45,3 +45,5 @@
 .field input:focus,.field select:focus,.field textarea:focus{box-shadow:0 0 0 4px rgb(54 103 176 / 10%)}
 @media(hover:none){.photo:hover img,.innovation-support article:hover,.pillar:hover,.process-step:hover{transform:none}}
 .country-panel:nth-child(2)::before{background:var(--blue-dark)}
+.audience-card::before{transform:scaleY(0);transform-origin:center bottom}
+.audience-card:hover::before,.audience-card:focus-visible::before{transform:scaleY(1)}
