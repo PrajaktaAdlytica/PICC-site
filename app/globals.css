@@ -23,3 +23,24 @@
 @media(prefers-reduced-motion:reduce){.button:not(:disabled)::before,.text-link::after,.footer-talk::after,.service-row::before,.service-card::before,.audience-card::before,.archive-feature::before,.network-item::before,.country-panel::before{transition:none}html{scroll-behavior:auto!important}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}[data-reveal]{opacity:1!important;transform:none!important}.photo:hover img,.button:hover{transform:none}.scroll-progress{display:none}}
 
 .review-icons{display:flex;flex-wrap:wrap;gap:18px;margin-top:24px}.review-icons>span{display:flex;align-items:center;gap:9px;border:1px solid var(--line);padding:12px;font-size:13px;text-transform:capitalize;color:var(--blue)}.review-icons>span:nth-child(1) .icon,.review-icons>span:nth-child(3) .icon{fill:currentColor;stroke:none}.source-link .icon{width:16px;height:16px;vertical-align:middle;margin-left:5px}
+
+/* Motion and interaction polish: keep the original PICC layout and palette. */
+.innovation-support article,.pillar,.process-step{transition:transform .38s cubic-bezier(.22,.61,.36,1),border-color .3s,color .3s}
+.innovation-support article{position:relative;border-color:var(--line)}
+.innovation-support article:hover{transform:translateY(-5px);border-color:#9eb5d6}
+.innovation-support article>.icon,.pillar-top .icon{transition:transform .38s cubic-bezier(.22,.61,.36,1),color .25s}
+.innovation-support article:hover>.icon,.pillar:hover .pillar-top .icon{transform:translate(3px,-3px);color:var(--red)}
+.pillar{border-top:1px solid var(--line)}
+.pillar:hover{transform:translateY(-4px);border-color:var(--red)}
+.process-step:hover{transform:translateY(-4px)}
+.process-step .process-number{transition:color .28s,transform .34s cubic-bezier(.22,.61,.36,1);transform-origin:left center}
+.process-step:hover .process-number{color:var(--red);transform:scale(1.06)}
+.footer-top nav a,.footer-contact>a:not(.footer-talk),.footer-bottom nav a{position:relative;transition:color .25s,transform .25s}
+.footer-top nav a:hover,.footer-contact>a:not(.footer-talk):hover,.footer-bottom nav a:hover{color:#fff;transform:translateX(4px)}
+.back-top{transition:background .28s,border-color .28s,color .28s,transform .28s}
+.back-top:hover{background:var(--blue);border-color:var(--blue);color:white;transform:translateY(-3px)}
+.photo img{transition:transform .85s cubic-bezier(.2,.7,.2,1)}
+.photo:hover img{transform:scale(1.035)}
+.field input,.field select,.field textarea{transition:border-color .22s,box-shadow .22s,background-color .22s}
+.field input:focus,.field select:focus,.field textarea:focus{box-shadow:0 0 0 4px rgb(54 103 176 / 10%)}
+@media(hover:none){.photo:hover img,.innovation-support article:hover,.pillar:hover,.process-step:hover{transform:none}}
