@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="PICC six-point geometric mark">
+  <rect width="100" height="100" rx="10" fill="#fff"/>
+  <path fill="#E01F25" d="M50 4 66 31H34zM11 72l16-27 16 27zM57 72l16-27 16 27z"/>
+  <path fill="#3667B0" d="M50 96 34 69h32zM11 28l16 27 16-27zM57 28l16 27 16-27z"/>
+</svg>
