@@ -47,3 +47,5 @@
 .country-panel:nth-child(2)::before{background:var(--blue-dark)}
 .audience-card::before{transform:scaleY(0);transform-origin:center bottom}
 .audience-card:hover::before,.audience-card:focus-visible::before{transform:scaleY(1)}
+.service-card::before{transform:scaleY(0);transform-origin:center bottom}
+.service-card:hover::before,.service-card:focus-within::before{transform:scaleY(1)}
