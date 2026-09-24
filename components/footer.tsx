@@ -22,9 +22,6 @@ export function Footer(){
     <Link href={href('/')} aria-label={polish?'Strona główna PICC':'PICC homepage'}><Image src="/assets/picc-logo-footer.png" width={838} height={234} alt={polish?'Polsko-Izraelska Izba Gospodarcza':'Polish–Israeli Chamber of Commerce'}/></Link>
     <p>{polish?<>Łączymy biznes.<br/>Budujemy relacje.</>:<>Bridging business.<br/>Building connections.</>}</p>
     <span className="footer-location">{polish?'POLSKA':'POLAND'} <i/> {polish?'IZRAEL':'ISRAEL'}</span>
-    <div className="footer-social-block"><h3>{polish?pl.nav.connect:'Connect'}</h3><div className="footer-socials" aria-label={polish?'Profile społecznościowe PICC':'PICC social profiles'}>
-     {(['linkedin','instagram','facebook'] as const).map(name=><span key={name} title={`${name[0].toUpperCase()+name.slice(1)} · ${polish?'link zostanie dodany':'link to be added'}`} aria-label={`${name[0].toUpperCase()+name.slice(1)} · ${polish?'link zostanie dodany':'link to be added'}`}><Icon name={name}/></span>)}
-    </div></div>
    </div>
    <div data-reveal><h3>{polish?pl.nav.explore:'Explore'}</h3><nav aria-label={polish?'Nawigacja w stopce':'Footer navigation'}>{navigation.slice(0,4).map(item=><Link key={item.href} href={href(item.href)}>{polish?polishLabels[item.href]:item.label}</Link>)}</nav></div>
    <div data-reveal><h3>{polish?pl.nav.discover:'Discover'}</h3><nav aria-label={polish?'Więcej o PICC':'More from PICC'}><Link href={href('/startups')}>{polish?'Startupy i innowacje':'Startups & Innovation'}</Link><Link href={href('/insights')}>{polish?pl.nav.insights:'Insights & Events'}</Link><Link href={href('/contact')}>{polish?pl.nav.contact:'Contact'}</Link></nav></div>

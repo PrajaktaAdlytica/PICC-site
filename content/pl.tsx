@@ -36,11 +36,11 @@ export const pl = {
   },
   services: [
     { name: 'Doradztwo biznesowe', short: 'Lokalna wiedza, która wspiera decyzje biznesowe.', text: 'Praktyczne wskazówki dla firm rozważających możliwości, partnerstwa lub rozwój na rynkach polskim i izraelskim.', topic: 'Market Entry' },
-    { name: 'Wyszukiwanie partnerów biznesowych', short: 'Znajdź osoby i organizacje dopasowane do swojego celu.', text: 'Identyfikacja potencjalnych firm i organizacji odpowiadających konkretnemu celowi biznesowemu.', topic: 'Business Partner Search' },
+    { name: 'Partnerzy biznesowi', short: 'Znajdź osoby i organizacje dopasowane do swojego celu.', text: 'Identyfikacja potencjalnych firm i organizacji odpowiadających konkretnemu celowi biznesowemu.', topic: 'Business Partner Search' },
     { name: 'Spotkania biznesowe', short: 'Stwórz warunki do wartościowej rozmowy.', text: 'Organizacja spotkań i przedstawień między właściwymi osobami decyzyjnymi.', topic: 'Business Meeting' },
     { name: 'Misje gospodarcze', short: 'Poznaj rynek dzięki dobrze zaplanowanym kontaktom.', text: 'Planowanie i wsparcie misji gospodarczych i handlowych, które łączą firmy z odpowiednim środowiskiem rynkowym.', topic: 'Business Mission' },
     { name: 'Projekty międzynarodowe', short: 'Rozwijaj współpracę firm i instytucji.', text: 'Wsparcie w nawiązywaniu współpracy w ramach projektów międzynarodowych z udziałem polskich i izraelskich partnerów.', topic: 'International Project' },
-    { name: 'Wsparcie specjalistyczne i prawne', short: 'Dostęp do wiedzy i właściwych ekspertów.', text: 'Dostęp do kontaktów specjalistycznych, informacji rynkowych i wsparcia prawnego związanego z działalnością międzynarodową.', topic: 'Other' },
+    { name: 'Wsparcie prawne', short: 'Dostęp do pomocy prawnej w działalności międzynarodowej.', text: 'Dostęp do kontaktów prawnych i wsparcia związanego z działalnością międzynarodową.', topic: 'Legal Support' },
   ],
   audiences: [
     { name: 'Firmy', text: 'Przedsiębiorstwa rozwijające partnerstwa, działalność międzynarodową i nowe możliwości rynkowe.' },
@@ -56,7 +56,7 @@ export const pl = {
     { name: 'Rozwijamy współpracę', text: 'Tam, gdzie to uzasadnione, wspieramy rozwój relacji w kierunku nowej możliwości, projektu lub współpracy międzynarodowej.' },
   ],
   innovation: [
-    ['Kontakty międzynarodowe', 'Przedstawienia firmom, instytucjom i ośrodkom badawczym.', 'network'],
+    ['Kontakty międzynarodowe', 'Przedstawienia firmom, instytucjom i organizacjom pozarządowym.', 'network'],
     ['Kontakty z inwestorami', 'Możliwości nawiązania relacji z funduszami, inwestorami prywatnymi i aniołami biznesu.', 'growth'],
     ['Rozwój na rynkach', 'Wsparcie w odkrywaniu możliwości międzynarodowego rozwoju biznesu.', 'globe'],
     ['Badania i technologie', 'Kontakty z instytucjami badawczymi oraz organizacjami rozwijającymi innowacje i technologie.', 'layers'],
@@ -64,7 +64,7 @@ export const pl = {
     ['Informacje specjalistyczne', 'Dostęp do przydatnych informacji rynkowych i kontaktów eksperckich.', 'consulting'],
   ],
   insights: {
-    categories: ['Wszystkie', 'Biznes', 'Innowacje', 'Wydarzenia', 'Polska–Izrael', 'Startupy'],
+    categories: ['Wszystkie', 'Biznes', 'Innowacje', 'Wydarzenia', 'Startupy'],
     title: 'Polsko-Izraelskie Forum Gospodarcze',
     excerpt: 'Spotkanie polskich i izraelskich firm poświęcone nawiązywaniu kontaktów i bezpośrednim rozmowom biznesowym.',
     archive: 'Z ARCHIWUM', place: 'TEL AWIW, IZRAEL', past: 'Wydarzenie archiwalne',
