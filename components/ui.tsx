@@ -20,10 +20,10 @@ export function Action({children, href='/contact', secondary=false, light=false,
 }
 export function TextLink({children,href='/contact'}:{children:ReactNode;href?:string}) { return <Link className="text-link" href={href}>{children}<Icon name="arrow-right"/></Link>; }
 export function Label({children,number}:{children:ReactNode;number?:string}) {return <div className="eyebrow">{number && <span className="section-number">{number}</span>}<span>{children}</span></div>;}
-export function Photo({className='',priority=false,caption,original=false,motion,asset,alt}:{className?:string;priority?:boolean;caption?:string;original?:boolean;motion?:'left'|'right'|'scale';asset?:'grafika';alt?:string}) {
+export function Photo({className='',priority=false,caption,original=false,motion,asset,alt,parallax=true}:{className?:string;priority?:boolean;caption?:string;original?:boolean;motion?:'left'|'right'|'scale';asset?:'grafika';alt?:string;parallax?:boolean}) {
  const src=asset==='grafika'?'/assets/grafika-1.jpg':original?'/assets/picc-original.jpg':'/assets/architecture.png';
  const description=alt??(asset==='grafika'?'Supplied monochrome rooftop artwork with PICC red and blue geometric overlays':original?'Architectural artwork from the supplied PICC visual collection':'Monochrome architectural illustration of a modern business district');
- return <figure className={`photo ${className}`} data-reveal={motion} data-parallax><Image src={src} alt={description} fill sizes="(max-width: 760px) 100vw, 50vw" preload={priority}/><div className="photo-blue" aria-hidden="true"/><div className="photo-red" aria-hidden="true"/>{caption&&<figcaption>{caption}</figcaption>}</figure>;
+ return <figure className={`photo ${className}`} data-reveal={motion} data-parallax={parallax?'':undefined}><Image src={src} alt={description} fill sizes="(max-width: 760px) 100vw, 50vw" preload={priority}/><div className="photo-blue" aria-hidden="true"/><div className="photo-red" aria-hidden="true"/>{caption&&<figcaption>{caption}</figcaption>}</figure>;
 }
 export function SectionHeading({number,label,title,description}:{number?:string;label:string;title:ReactNode;description?:string}) {return <div className="section-heading" data-reveal><div><Label number={number}>{label}</Label><h2>{title}</h2></div>{description&&<p>{description}</p>}</div>;}
 export function InternalHero({label,title,text,theme='blue',photo=false,photoAsset,photoAlt}:{label:string;title:ReactNode;text:string;theme?:string;photo?:boolean;photoAsset?:'grafika';photoAlt?:string}) {
