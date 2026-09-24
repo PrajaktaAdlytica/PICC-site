@@ -58,3 +58,5 @@
 .service-card h3{min-height:2.24em}
 .service-card .text-link{align-self:flex-start;margin-top:auto}
 @media(max-width:760px){.service-card h3{min-height:0}}
+.insights-preview .section-bottom-link{width:380px;max-width:100%;margin:0 0 0 auto;justify-content:flex-start}
+@media(max-width:760px){.insights-preview .section-bottom-link{width:100%;margin:0}}
