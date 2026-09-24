@@ -13,6 +13,7 @@ const polishLabels:Record<string,string>={
 
 export function Footer(){
  const pathname=usePathname();
+ const englishOnly=process.env.NEXT_PUBLIC_PICC_SITE_MODE==='english';
  const polish=pathname==='/pl'||pathname.startsWith('/pl/');
  const prefix=polish?'/pl':'';
  const href=(path:string)=>`${prefix}${path==='/'?'':path}`||'/';
@@ -27,6 +28,6 @@ export function Footer(){
    <div data-reveal><h3>{polish?pl.nav.discover:'Discover'}</h3><nav aria-label={polish?'Więcej o PICC':'More from PICC'}><Link href={href('/startups')}>{polish?'Startupy i innowacje':'Startups & Innovation'}</Link><Link href={href('/insights')}>{polish?pl.nav.insights:'Insights & Events'}</Link><Link href={href('/contact')}>{polish?pl.nav.contact:'Contact'}</Link></nav></div>
    <div className="footer-contact" data-reveal="right"><h3>{polish?'Rozpocznij rozmowę':'Start a conversation'}</h3><a href="mailto:office@polishisraeli.org"><Icon name="mail"/>office@polishisraeli.org</a><p><Icon name="pin"/><span>{polish?<>ul. Trębacka 4<br/>00-074 Warszawa, Polska</>:<>ul. Trębacka 4<br/>00-074 Warsaw, Poland</>}</span></p><Link href={href('/contact')} className="footer-talk">{polish?pl.nav.talk:'Talk to Us'} <Icon name="arrow-up-right"/></Link></div>
   </div>
-  <div className="footer-bottom" data-reveal><span>© {new Date().getFullYear()} PICC</span><nav aria-label={polish?'Informacje prawne':'Legal information'}><Link href={href('/privacy')}>{polish?'Prywatność':'Privacy'}</Link><Link href={href('/gdpr')}>GDPR</Link><Link href={href('/cookies')}>{polish?'Pliki cookie':'Cookies'}</Link><Link href={href('/preview-notes')} className="preview-link">{polish?'Uwagi do wersji roboczej':'Draft notes'}</Link></nav><a href="#top" aria-label={polish?'Wróć na górę':'Back to top'} className="back-top"><Icon name="arrow-up"/></a></div>
+  <div className="footer-bottom" data-reveal><span>© {new Date().getFullYear()} PICC</span><nav aria-label={polish?'Informacje prawne':'Legal information'}><Link href={href('/privacy')}>{polish?'Prywatność':'Privacy'}</Link><Link href={href('/gdpr')}>GDPR</Link><Link href={href('/cookies')}>{polish?'Pliki cookie':'Cookies'}</Link>{!englishOnly&&<Link href={href('/preview-notes')} className="preview-link">{polish?'Uwagi do wersji roboczej':'Draft notes'}</Link>}</nav><a href="#top" aria-label={polish?'Wróć na górę':'Back to top'} className="back-top"><Icon name="arrow-up"/></a></div>
  </div></footer>;
 }

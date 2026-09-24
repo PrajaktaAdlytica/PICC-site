@@ -14,6 +14,7 @@ const polishLabels:Record<string,string>={
 
 export function Header(){
  const pathname=usePathname();
+ const englishOnly=process.env.NEXT_PUBLIC_PICC_SITE_MODE==='english';
  const isPolish=pathname==='/pl'||pathname.startsWith('/pl/');
  const prefix=isPolish?'/pl':'';
  const [open,setOpen]=useState(false);
@@ -27,7 +28,7 @@ export function Header(){
   <Link href={href('/')} className="logo-link" aria-label={isPolish?'Strona główna PICC':'PICC homepage'}><Image src="/assets/picc-logo-light.png" alt={isPolish?'Polsko-Izraelska Izba Gospodarcza':'Polish–Israeli Chamber of Commerce'} width={838} height={234} preload/></Link>
   <nav className="desktop-nav" aria-label={isPolish?'Nawigacja główna':'Main navigation'}>{navigation.map(item=><Link key={item.href} href={href(item.href)} aria-current={pathname===href(item.href)?'page':undefined}>{isPolish?polishLabels[item.href]:item.label}</Link>)}</nav>
   <div className="header-actions">
-   <nav className="languages" aria-label={isPolish?'Wybór języka':'Language selector'}><Link href={englishPath} lang="en" aria-current={!isPolish?'page':undefined}>EN</Link><span>/</span><Link href={polishPath} lang="pl" aria-current={isPolish?'page':undefined}>PL</Link></nav>
+   {!englishOnly&&<nav className="languages" aria-label={isPolish?'Wybór języka':'Language selector'}><Link href={englishPath} lang="en" aria-current={!isPolish?'page':undefined}>EN</Link><span>/</span><Link href={polishPath} lang="pl" aria-current={isPolish?'page':undefined}>PL</Link></nav>}
    <Link href={href('/contact')} className="button header-cta"><span>{isPolish?pl.nav.talk:'Talk to Us'}</span><Icon name="arrow-up-right"/></Link>
    <button className="menu-toggle" aria-expanded={open} aria-controls="mobile-menu" aria-label={isPolish?(open?'Zamknij menu':'Otwórz menu'):(open?'Close menu':'Open menu')} ref={trigger} onClick={()=>setOpen(!open)}><Icon name={open?'close':'menu'}/></button>
   </div>
