@@ -72,3 +72,7 @@
 .home-why .pillar-grid>.pillar:nth-child(2) p{max-width:270px}
 @media(max-width:760px){.home-why .pillar-grid>.pillar:nth-child(2) p{max-width:100%}}
 @media(min-width:761px){.innovation-visual{display:flex;align-self:stretch}.innovation-photo{flex:1;height:auto;min-height:535px}}
+.country-panel{display:flex;flex-direction:column}
+.country-panel h3{min-height:3.36em}
+.country-panel .text-link{align-self:flex-start;margin-top:auto;padding-top:25px}
+@media(max-width:760px){.country-panel h3{min-height:0}}
